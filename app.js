@@ -29,11 +29,11 @@ window.onload = function () {
   })
   let save = document.getElementById('save')
   save.addEventListener('click',()=>{
-    console.log("save");
+    let imgName = prompt('please enter image name')
     let canvasDataURL = canvas.toDataURL()
     let a = document.createElement('a')
     a.href=canvasDataURL
-    a.download = 'drawing'
+    a.download = imgName || 'drawing'
     a.click()
 
   })
